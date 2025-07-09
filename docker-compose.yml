@@ -1,0 +1,45 @@
+
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cyber_security
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build: ./cyberthreat
+    container_name: spring_backend
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/cyber_security
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      JWT_SECRET: Suchetan@2706
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ./cyber-threat-frontend
+    container_name: react_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  mlapi:
+    build: ./ml-model
+    container_name: flask_ml_api
+    ports:
+      - "5000:5000"
+    restart: always
+
+volumes:
+  mysql_data:
