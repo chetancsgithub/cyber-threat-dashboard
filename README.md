@@ -85,10 +85,6 @@ POST	/api/auth/login	JWT login	❌ No
 POST	/api/analyze	Analyze threat description	✅ Yes (JWT)
 GET	/api/threats	List all threats	❌ No
 
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/66d5964d-6aa3-46c9-9aa3-50b4fe389a0e" />
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/b0bbfaeb-34a2-4569-9bee-f08825ab41e9" />
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/836e8f4a-3bea-4072-a637-d8b29907072a" />
-<img width="960" alt="image" src="https://github.com/user-attachments/assets/bef8585d-e16d-4da6-94d2-64e7f51a624e" />
 
 📦 Docker Containers
 Service	Port	Description
