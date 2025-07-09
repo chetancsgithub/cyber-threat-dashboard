@@ -16,7 +16,7 @@ A full-stack web application for analyzing cyber threat descriptions using machi
   List, view, and explore cyber threat reports with category labels.
 
 - 🌐 **Modern UI/UX**  
-  Clean, responsive interface built using React + TailwindCSS.
+  Clean, responsive interface built using React.
 
 - 🐳 **Containerized**  
   Full application stack runs with a single `docker-compose up` command.
