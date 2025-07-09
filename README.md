@@ -68,6 +68,38 @@ ML API: http://localhost:5000
 
 MySQL: localhost:3306 (DB: cyber_security)
 
+🛠️ Manual Setup (Without Docker)
+1️⃣ Backend (Spring Boot)
+bash
+Copy
+Edit
+cd backend
+./mvnw clean install
+java -jar target/cyberthreat-0.0.1-SNAPSHOT.jar
+Runs on: http://localhost:8080
+
+2️⃣ ML API (Flask)
+bash
+Copy
+Edit
+cd ml-model
+pip install -r requirements.txt
+python predict_api.py
+Runs on: http://localhost:5000
+
+✅ Place vectorizer.pkl and model.pkl in ml-model/ folder.
+
+3️⃣ Frontend (React)
+bash
+Copy
+Edit
+cd frontend
+npm install
+npm start
+Runs on: http://localhost:3000
+
+
+
 3. 🧪 Test Credentials
 Use the credentials from the users table in MySQL.
 Or manually insert a user:
